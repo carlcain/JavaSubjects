@@ -1,4 +1,4 @@
-package advanced_java_features;
+package advanced_java_features_anonymousclass;
 
 public interface SampleInterface 
 {

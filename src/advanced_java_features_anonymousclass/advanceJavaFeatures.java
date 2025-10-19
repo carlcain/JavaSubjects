@@ -1,4 +1,4 @@
-package advanced_java_features;
+package advanced_java_features_anonymousclass;
 public class advanceJavaFeatures 
 {
    public static void main(String[]args)
@@ -11,6 +11,18 @@ public class advanceJavaFeatures
    // TODO: 
    // note in a Interface you need to apply every method that you created in the interface 
    // when instantiating a new anonymouse class
+
+   // anonymous class = an inner class without a name
+	// 	   				only a single object is created from one
+	// 	  					The object may have “extras” or "changes"
+	// 	 					and no need to create a separate innerclass
+	// 	 					when it is only need it once.
+	// 	 					Helps us to avoid cluttering code with a class name
+	
+	// 	 					Syntax is similar to a constructor,
+	// 	  					except that there is also a class definition
+	// 	  					within a block of code.		
+	// 	  					GREAT FOR LISTENERS
 
    // anonymous inner class 1
    // note: 
@@ -47,14 +59,15 @@ public class advanceJavaFeatures
 
    // anonymous inner class 2
    // note:
-   // 
+   // usses the lambda or known as anonymous method
+   // to make and anonymouse inner class
    public static void functionalInterface3()
    {
       SampleInterface si= (x) -> { // the message here is a parameter name
          System.out.println(x);
       };
 
-      si.message("This is a Lambda inner class");
+      si.message("This is a Lambda annonymouse class");
 
    // SampleInterface si = (a, b) -> { a + b;};
    }
