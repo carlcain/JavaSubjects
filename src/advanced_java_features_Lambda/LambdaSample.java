@@ -8,6 +8,8 @@ public class LambdaSample
     {
         LambdaSample1();
         LambdaSample2();
+        methodReferencing1();
+        methodReferencing2();
     }
 
     /* lambda expression = 	feature for Java 8 and above
@@ -55,16 +57,33 @@ public class LambdaSample
         s.sample("three");
     }
 
-    // Lambda 2
+    // Method Referencing 1
     // note:
-    // this is method refferencing
-    public static void LambdaSample3()
+    // this is method refferencing but i put it here because they seem similar to a lambda
+    // this is just like a lambda but much more shorter 
+    public static void methodReferencing1()
     {
         ArrayList<String>sample = new ArrayList<>();
-        sample.add("This is lambda3: one");
-        sample.add("This is lambda3: two");
-        sample.add("This is lambda3: three");
+        sample.add("Method Referencing1: one");
+        sample.add("Method Referencing1: two");
+        sample.add("Method Referencing1: three");
 
-        sample.forEach(System.out::println); // this is method reference
+        SampleMessage s = new SampleMessage();
+
+        // ( sample.forEach((e) -> s.something(e)); ) 
+        // they are basicaly simmilar 
+        sample.forEach(s::something); // this is method reference
+    }
+
+    // Method Referencing 3
+    // note:
+    public static void methodReferencing2()
+    {
+        ArrayList<String> sample = new ArrayList<>();
+        sample.add("Method Referencing2: one");
+        sample.add("Method Referencing2: two");
+        sample.add("Method Referencing2: three");
+
+        sample.forEach(System.out::println);
     }
 }
