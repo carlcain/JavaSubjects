@@ -1,6 +1,7 @@
 package advanced_java_features_Lambda;
 
 import java.util.ArrayList;
+import java.util.function.Consumer;
 
 public class LambdaSample
 {
@@ -57,6 +58,9 @@ public class LambdaSample
         s.sample("three");
     }
 
+
+    // method referencing = 
+
     // Method Referencing 1
     // note:
     // this is method refferencing but i put it here because they seem similar to a lambda
@@ -77,6 +81,10 @@ public class LambdaSample
 
     // Method Referencing 3
     // note:
+    // this will print the contents of the sample Arraylist.
+    // refers to the println method of the PrintStream object associated with System.out.
+    // It is not a direct invocation of the method but an expression that can be passed 
+    // to functions expecting a functional interface, such as Consumer or Runnable
     public static void methodReferencing2()
     {
         ArrayList<String> sample = new ArrayList<>();
