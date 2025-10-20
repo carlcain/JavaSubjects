@@ -6,6 +6,7 @@ public class EnumsMain
     {
         Sample s = Sample.one;
 
+        // using a class varriable names
         System.out.println(s.getId()+" : "+s.getName());
 
         // this is a way of using the class names 
