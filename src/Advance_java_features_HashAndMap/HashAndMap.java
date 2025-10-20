@@ -64,7 +64,6 @@ public class HashAndMap
         // use a simple if outside the main condition.
          if(name.equalsIgnoreCase("Exit")) // end loop and allow the user to type "exit" in any letter case
          {
-            System.out.println("e");
             break; // exit the loop even if its true
          }
 
@@ -85,9 +84,11 @@ public class HashAndMap
             else // where the user cannot fina a slot
             {
                System.out.println("All slot are taken");
+               sc.close();
                break;
             }
          } 
+         sc.close();
       }
 
       // see all of the inserted user
@@ -127,6 +128,7 @@ public class HashAndMap
       lh.put(1, "user1");
       lh.put(3, "user3");
 
+      // uses the Hasmap sp 
       TreeMap<Integer, String> t = new TreeMap<>(lh);
 
       for(Map.Entry<Integer, String> map: t.entrySet())

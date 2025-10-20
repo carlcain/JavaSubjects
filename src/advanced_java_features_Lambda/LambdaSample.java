@@ -1,7 +1,6 @@
 package advanced_java_features_Lambda;
 
 import java.util.ArrayList;
-import java.util.function.Consumer;
 
 public class LambdaSample
 {
