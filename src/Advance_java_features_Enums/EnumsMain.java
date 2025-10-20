@@ -2,6 +2,11 @@ package Advance_java_features_Enums;
 
 public class EnumsMain 
 {
+    // Enums = (Enumerations) A special kind of class that
+    //                  represents a fixed set of constants.
+    //                  They improve code readability and reliability.
+    //                  More efficient with switches than Strings.
+
     public static void main(String[]args)
     {
         Sample s = Sample.one;
