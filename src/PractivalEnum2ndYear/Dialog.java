@@ -1,3 +1,5 @@
+package PractivalEnum2ndYear;
+
 import java.util.Scanner;
 
 public class Dialog 

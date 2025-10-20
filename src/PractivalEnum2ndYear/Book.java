@@ -1,3 +1,5 @@
+package PractivalEnum2ndYear;
+
 public class Book
 {
     private String bookID;

@@ -1,3 +1,5 @@
+package PractivalEnum2ndYear;
+
 public enum Category
 {
     FICTION(0),
