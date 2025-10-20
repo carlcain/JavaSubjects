@@ -11,10 +11,11 @@ public class HashAndMap
 {
    public static void main(String[]args)
    {
-      MapSample1();
-      //MapSample2();
-      LinkedHashedMap1();
-      TreeHashMap1();
+      MapSample2();
+
+      // MapSample1();
+      // LinkedHashedMap1();
+      // TreeHashMap1();
    }
 
 
@@ -42,6 +43,8 @@ public class HashAndMap
    // HashSample1
    // note:
    // this will put a user on the HashMap and find a slot that is not occupied
+   // in a loop you can put "continue" 
+   // "continue" = continue makes the loop jump to the next iteration
    public static void MapSample2()
    {
       HashMap<Integer, String> Users = new HashMap<>();
@@ -56,8 +59,6 @@ public class HashAndMap
          System.out.print("Insert Name: ");
          String name = sc.nextLine();
 
-         key = r.nextInt(10);
-
         // Note:
         // Once if or else if is true, the rest are skipped.
         // use a simple if outside the main condition.
@@ -67,16 +68,26 @@ public class HashAndMap
             break; // exit the loop even if its true
          }
 
-         if(Users.containsKey(key)) // it finds a similar key
+         while(true)
          {
-            System.out.println("slot taken: find slot");
-            continue;
-         }
-         else if(!Users.containsKey(key)) // it didnt find a similar key 
-         {
-            System.out.println("slot is free: insert User");
-            Users.put(key, name);
-         }
+            key = r.nextInt(10);
+
+            if(Users.containsKey(key)) // it finds a similar key
+            {
+               System.out.println("slot taken: find slot = Key: "+key);
+            }
+            else if(!Users.containsKey(key)) // it didnt find a similar key 
+            {
+               System.out.println("slot is free: insert User = Key: "+key);
+               Users.put(key, name);
+               break; // break so the loop will restart here
+            }
+            else // where the user cannot fina a slot
+            {
+               System.out.println("All slot are taken");
+               break;
+            }
+         } 
       }
 
       // see all of the inserted user
@@ -108,6 +119,7 @@ public class HashAndMap
 
    // TreeHashMap1
    // note:
+   // this tree hashmap will sort the key 
    public static void TreeHashMap1()
    {
       HashMap<Integer, String> lh = new HashMap<>();
